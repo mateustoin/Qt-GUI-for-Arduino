@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->sliderServo->setValue(0);
 
     ui->servoPosition->setText("0º");
-    ui->connectionStatus->setText(QString("<span style=\" font-size:18pt; color:red;\">Desconectado</span>"));
+    ui->connectionStatus->setText(QString("<span style=\" font-size:14pt; color:red;\">Desconectado</span>"));
 
     serialBuffer = "";
 
@@ -64,15 +64,13 @@ MainWindow::~MainWindow(){
     delete ui;
 }
 
-void MainWindow::on_sliderLedAzul_valueChanged(int value)
-{
+void MainWindow::on_sliderLedAzul_valueChanged(int value){
     this->sendSerialCommand(QString("l%1").arg(value));
     int labelValue = value/255.0 * 100;
     ui->luminosidadeLed->setText(QString("%1%").arg(labelValue));
 }
 
-void MainWindow::sendSerialCommand(QString command)
-{
+void MainWindow::sendSerialCommand(QString command){
     updateConnectionStatus();
 
     if (arduino->isWritable()){
@@ -80,8 +78,8 @@ void MainWindow::sendSerialCommand(QString command)
     }
 }
 
-void MainWindow::readSerial()
-{
+void MainWindow::readSerial(){
+    updateConnectionStatus();
     //qDebug() << arduino->readLine();
     QStringList bufferSplit = serialBuffer.split(",");
     if (bufferSplit.length() < 3){
@@ -95,8 +93,6 @@ void MainWindow::readSerial()
 }
 
 void MainWindow::updatePotenciometerData(QString data){
-    updateConnectionStatus();
-
     ui->lcdNumber->display(data);
     int potProgressBar = data.toInt()/10;
     ui->progressBar->setValue(potProgressBar);
@@ -109,7 +105,7 @@ void MainWindow::updateConnectionStatus(){
         return;
     }else{
         arduino->close();
-        ui->connectionStatus->setText(QString("<span style=\" font-size:18pt; color:red;\">Desconectado</span>"));
+        ui->connectionStatus->setText(QString("<span style=\" font-size:14pt; color:red;\">Desconectado</span>"));
         QMessageBox::warning(this, "Arduino desconectado",
                              "A conexão com o Arduino foi rompida.");
     }
@@ -204,7 +200,6 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event){
 }
 
 void MainWindow::on_sliderServo_valueChanged(int value){
-    updateConnectionStatus();
     this->sendSerialCommand(QString("s%1").arg(value));
     ui->servoPosition->setText(QString("%1º").arg(value));
 
@@ -233,6 +228,10 @@ void MainWindow::on_refresh_clicked(){
     }
 
     ui->deviceList->addItems(this->devices);
+
+    if (this->devices.isEmpty()){
+        ui->connectionStatus->setText(QString("<span style=\" font-size:14pt; color:red;\">Desconectado</span>"));
+    }
 }
 
 void MainWindow::on_connectBoard_clicked(){
@@ -243,7 +242,7 @@ void MainWindow::on_connectBoard_clicked(){
     }else{
         arduino_is_available = true; // Se passar por todas as verificações recebe true na verificação
         arduino_port_name = ui->deviceList->currentText(); // Se passar por todas as verificações recebe o nome da porta
-        ui->connectionStatus->setText(QString("<span style=\" font-size:18pt; color:green;\">Conectado</span>"));
+        ui->connectionStatus->setText(QString("<span style=\" font-size:14pt; color:green;\">Conectado</span>"));
 
         arduino->setPortName(arduino_port_name); // Mudando o nome da porta para o que encontramos do arduino
         arduino->open(QSerialPort::ReadWrite); //Acessando arduino em modo de escrita para a placa, pois só iremos controlar os leds
