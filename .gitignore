@@ -32,3 +32,5 @@
 *.app
 build*
 *.pro.user
+
+Fritzing-parts/
