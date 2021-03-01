@@ -13,7 +13,7 @@
 [![Telegram Badge](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](t.me/bittoin)
 -->
 
-<a href="instagram.com/bittoin_">
+<a href="https://instagram.com/bittoin_">
 <img border="0" alt="Instagram" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
 </a>
 
@@ -21,12 +21,12 @@
 <img border="0" alt="Youtube" src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
 </a>
 
-<a href="twitch.tv/bittoin">
+<a href="https://www.twitch.tv/bittoin">
 <img border="0" alt="Twitch" src="https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white">
 </a>
 
-<a href="t.me/bittoin">
-<img border="0" alt="Telegram" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+<a href="https://t.me/bittoin">
+<img border="0" alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">
 </a>
 
 
