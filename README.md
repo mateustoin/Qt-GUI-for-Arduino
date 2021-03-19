@@ -29,7 +29,6 @@
 <img border="0" alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">
 </a>
 
-
 <h3 align="center">
   Uso de linguagens de programação para uma maior diversidade de projetos.
 </h3>
@@ -61,20 +60,47 @@ Abaixo você pode visualizar o circuito montado no simulador [Tinkercad](https:/
 
 <div align='center'>
     <img src="images/circuit.png">
-    <p>Figura 1. Teste</p>
+    <p>Figura 1. Representação do Circuito montado no Tinkercad</p>
 </div>
 
 <h3 id="circuito">Circuito</h3>
+
+<div align='center'>
+    <img src="images/esquematico-pcb.png">
+    <p>Figura 2. Esquemático do Circuito</p>
+</div>
 
 O circuito possui alguns componentes que juntos são capazes de provar vários conceitos na montagem de circuitos e programação para Arduino. O potênciometro funciona como um dispositivo que substitui a leitura de qualquer tipo de sensor, enquanto o led atua para validar dispositivos que ligam e desligam, além de testes com o PWM. Por último, o Servo Motor como um atuador, para se movimentar e atuar conforme a necessidade.
 
 <h4 id="materiais">Lista de Materiais</h4>
 
++ Arduino Uno R3
++ Protoboard
++ Fios macho-macho
++ Led difuso 5mm
++ Potênciometro 10k Linear
++ Micro Servo Motor
++ Resistor 220Ω
++ Resistor 10kΩ
+
 <h3 id="interface-grafica">Interface Gráfica</h3>
+
+<div align='center'>
+    <img src="images/tela-app.png">
+    <p>Figura 3. Interface simples de controle feita em Qt</p>
+</div>
 
 <h3 id="pcb">Placa de Circuito Impresso (PCB)</h3>
 
-Realizado durante as lives da twitch no <a href="https://twitch.tv/bittoin">canal BitToin</a>, foi um projeto que utilizou como base um pacote em Dart feito também durante as lives para a comunicação da linguagem suportada em Dart/Flutter com o Drone. Atualmente o pacote está disponível de maneira oficial no site de pacotes do Dart (<a href="https://pub.dev/packages/tello">link do package</a>).
+<div align='center'>
+    <img src="images/pcb.png">
+    <p>Figura 4. Esquemático da PCB</p>
+</div>
+
+<div align='center'>
+    <img src="images/demo-pcb.gif">
+    <p>Figura 5. Modelo 3D da PCB</p>
+</div>
 
 <h2 id="comecando">Começando</h2>
 
@@ -98,7 +124,6 @@ Siga estas instruções para criar, replicar e modificar o modelo do projeto na 
 + [ ] Feature 2
 + [ ] Feature 3
 + [ ] Feature 4
-+ [ ] As
 
 Alguns outros componentes básicos como push-button e sensor LDR seriam uma ótima adição ao projeto, porém o potênciometro
 
