@@ -114,15 +114,33 @@ No gif abaixo é possível observar os pinos laterais, que seriam encaixados dir
     <p>Figura 5. Modelo 3D da PCB</p>
 </div>
 
+> Software utilizado para a criação da PCB: *EasyEDA*
+
 <h2 id="comecando">Começando</h2>
 
 Siga estas instruções para criar, replicar e modificar o modelo do projeto na sua máquina. 
 
 <h3 id='pre_req'>Pré-requisitos</h3>
 
+Os softwares utilizados para a criação e execução do código.
+
+> Qt: Kit Desktop 5.15.2
+> Arduino: Arduino IDE 1.8.13 ou PlatformIO
+
 <h3 id='instalacao'>Instalação</h3>
 
+Para executar o código Qt, basta clonar este repositório ou fazer o download. Depois abrir a IDE do Qt (Qt Creator), **File > Open file or project** e depois selecionar o arquivo **arduino-gui.pro** dentro da pasta do projeto **arduino-gui**.
+
+O código do Arduino pode ser encontrado na pasta *codes/qt_arduino.ino*. Para utilizá-lo, basta ter a IDE do Arduino instalada e realizar o upload do código na placa. Além disso, ter todos os componentes conectados de acordo com o circuito esquemático mostrado na primeira figura.
+
 <h2 id="uso">Uso</h2>
+
+<div align='center'>
+    <img src="images/demo-interface-compressed-min.gif">
+    <p>Figura 6. Exemplo de uso da Interface feito durante a live de desenvolvimento</p>
+</div>
+
+<!--
 
 <h2 id="codigo">Código</h2>
 
@@ -130,16 +148,27 @@ Siga estas instruções para criar, replicar e modificar o modelo do projeto na 
 
 <h3 id='codigo-qt'>Código Qt</h3>
 
+-->
+
 <h2 id='todo'>Features</h2>
 
-+ [ ] Feature 1
-+ [ ] Feature 2
-+ [ ] Feature 3
-+ [ ] Feature 4
++ [x] Controla luminosidade do LED pela interface
++ [x] Liga e desliga LED pelo teclado
++ [x] Controla posição do Servo Motor pela interface
++ [x] Controla posição do Servo Motor pelo teclado
++ [x] Visualiza valor do potenciômetro/sensor em um display
++ [x] Visualiza o valor do potenciômetro/sensor em valor percentual
++ [x] Painel de verificação de placas conectadas no computador
++ [x] Botão de conexão
 
-Alguns outros componentes básicos como push-button e sensor LDR seriam uma ótima adição ao projeto, porém o potênciometro
+Alguns outros componentes básicos como push-button e sensor LDR seriam uma ótima adição ao projeto, porém o potênciometro já serve como substituto para a maioria dos possíveis inputs que poderíamos ter.
 
+Algumas melhorias que poderiam ser feitas futuramente:
 
++ Botão de conectar vira desconectar
++ Maior responsividade entre os componentes e imagens
++ Melhoria no design da interface (UI/UX)
++ Controle de mais componentes
 
 ## Licença
 
