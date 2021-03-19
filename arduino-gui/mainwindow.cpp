@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
+    serialBuffer = "";
     ui->lcdNumber->display("-------");
 
     // Garante que a barra do servo será de no mínimo 0 e máximo 180, limites do servo em graus
@@ -23,20 +24,24 @@ MainWindow::MainWindow(QWidget *parent)
     ui->sliderServo->setMaximum(180);
     ui->sliderServo->setValue(0);
 
+    // Inicializa o valor da posição do Servo Motor em 0
     ui->servoPosition->setText("0º");
+
+    // Inicia string de conexão como Desconectado
     ui->connectionStatus->setText(QString("<span style=\" font-size:14pt; color:red;\">Desconectado</span>"));
 
-    serialBuffer = "";
-
+    // Inicializa informações do Arduino vazios
     this->arduino_is_available = false; //Iniciando variável
     this->arduino_port_name = ""; //Iniciando variável com nada
     this->arduino = new QSerialPort; //Adicionado de acordo com o vídeo
 
+    // Carrega imagens da aplicação
     //ui->luminosidadeLed->setFixedWidth(40);
-    QPixmap pixmapLed("/home/mateus/Documentos/QtProjects/led_control/led.jpg");
-    QPixmap pixmapServo("/home/mateus/Documentos/QtProjects/led_control/servo.jpg");
-    QPixmap pixmapRefreshIcon("/home/mateus/Documentos/QtProjects/led_control/refresh.png");
+    QPixmap pixmapLed(":/img/led.jpg");
+    QPixmap pixmapServo(":/img/servo.jpg");
+    QPixmap pixmapRefreshIcon(":/img/refresh.png");
 
+    // Inicializa imagens nos widgets
     QIcon refreshIcon(pixmapRefreshIcon);
     ui->refresh->setIcon(refreshIcon);
 
