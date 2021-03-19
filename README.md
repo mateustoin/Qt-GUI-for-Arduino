@@ -85,17 +85,29 @@ O circuito possui alguns componentes que juntos são capazes de provar vários c
 
 <h3 id="interface-grafica">Interface Gráfica</h3>
 
+A interface gráfica, como pode ser vista na figura abaixo, é simples e possui algumas funcionalidades. Possui uma área de reconhecimento de portas, para identificar as placas que estão conectadas e um botão para atualizar a lista. Possui também um botão para conectar e um label para indicar se está conectado ou desconectado.
+
+Abaixo, na área de controle, tem um slider responsável por alterar a luminosidade do LED e a própria imagem do LED é um botão, para ligá-lo e desligá-lo quando for clicado. Na direita tem um slider semelhante, para controlar o Micro Servo Motor de 0º a 180º, além de poder controlá-lo também pelo teclado.
+
+Por último, na interface podemos ver um display de leitura do potênciometro, que mostra o valor inteiro ou em valor percentual, indicando o início e o fim do seu curso. Esse potênciometro poderia ser substituído por qualquer tipo de sensor que gere dados.
+
 <div align='center'>
     <img src="images/tela-app.png">
-    <p>Figura 3. Interface simples de controle feita em Qt</p>
+    <p>Figura 3. Interface simples de controle e leitura feita em Qt</p>
 </div>
 
 <h3 id="pcb">Placa de Circuito Impresso (PCB)</h3>
+
+Para que o projeto não fosse apenas um circuito montado em uma protoboard, uma PCB foi pensada para futuramente ser utilizado como um protótipo fácil de utilizar em um minicurso ou workshop. Para isso, o mesmo circuito testado e validado foi idealizado para se tornar um Shield para Arduino.
+
+Um shield consiste em uma placa criada com um propósito específico que é encaixada em cima de uma placa Arduino com todas as conexões já feitas, deixando a experiência mais fácil, direta, estilo plug-and-play.
 
 <div align='center'>
     <img src="images/pcb.png">
     <p>Figura 4. Esquemático da PCB</p>
 </div>
+
+No gif abaixo é possível observar os pinos laterais, que seriam encaixados diretamente na placa Arduino, enquanto no centro da placa se encontram todos os componentes e slots para encaixar os componentes do projeto.
 
 <div align='center'>
     <img src="images/demo-pcb.gif">
